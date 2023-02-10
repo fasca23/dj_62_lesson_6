@@ -1,0 +1,4 @@
+env
+logistic/__pycache__
+logistic/migrations/__pycache__
+stocks_products/__pycache__
