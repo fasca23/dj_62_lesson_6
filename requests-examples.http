@@ -7,7 +7,7 @@ POST {{baseUrl}}/products/
 Content-Type: application/json
 
 {
-  "title": "Лимон3",
+  "title": "Лимон333",
   "description": "Лучшие помидоры на рынке"
 }
 
@@ -20,11 +20,11 @@ Content-Type: application/json
 ###
 
 # обновление продукта
-PATCH {{baseUrl}}/products/5/
+PATCH {{baseUrl}}/products/6/
 Content-Type: application/json
 
 {
-  "description": "2Самые сочные и ароматные помидорки"
+  "description": "23333Самые сочные и ароматные помидорки"
 }
 
 ###
@@ -36,7 +36,7 @@ Content-Type: application/json
 ###
 
 # поиск продуктов по названию и описанию
-GET {{baseUrl}}/products/?search=помидор
+GET {{baseUrl}}/products/?search=лимон2
 Content-Type: application/json
 
 ###
@@ -46,10 +46,10 @@ POST {{baseUrl}}/stocks/
 Content-Type: application/json
 
 {
-  "address": "Склад №1",
+  "address": "Склад 333",
   "positions": [
     {
-      "product": 6,
+      "product": 11,
       "quantity": 250,
       "price": 120.50
     },
@@ -64,15 +64,15 @@ Content-Type: application/json
 ###
 
 # обновляем записи на складе
-PATCH {{baseUrl}}/stocks/14/
+PATCH {{baseUrl}}/stocks/16/
 Content-Type: application/json
 
 {
   "positions": [
     {
-      "product": 6,
-      "quantity": 11,
-      "price": 130.80
+      "product": 9,
+      "quantity": 11111,
+      "price": 1300.80
     },
     {
       "product": 7,
@@ -85,5 +85,11 @@ Content-Type: application/json
 ###
 
 # поиск складов, где есть определенный продукт
-GET {{baseUrl}}/stocks/?products=2
+GET {{baseUrl}}/stocks/?products=7
+Content-Type: application/json
+
+###
+
+# поиск складов, где есть определенный продукт по названию
+GET {{baseUrl}}/stocks/?search=лимон333
 Content-Type: application/json
